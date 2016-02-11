@@ -20,7 +20,7 @@ public class HelloSpark {
     // Create a new ArticleDbService using the ArticleServletDao as the implmentation
     // Since all of our DAO classes will implement the same interface we can just swap
     // them out as we'll see later on
-    public static ArticleDbService<Article> articleDbService = new ArticleServletDao<Article>();
+    public static ArticleDbService<Article> articleDbService = new ArticleMongoDao();
 //    public static Deque<Article> articles = new ArrayDeque<Article>();
 
     
@@ -119,7 +119,7 @@ public class HelloSpark {
             @Override
             public Object handle(Request request, Response response) {
                 Integer id = Integer.parseInt(request.params(":id"));
-                Map<String, Object> viewObjects = new HashMap<String, Object>();
+                Map<String, Object> viewObjects = new HashMap();
 
                 viewObjects.put("templateName", "articleRead.ftl");
 
