@@ -14,7 +14,7 @@ import java.util.Map;
 import spark.ModelAndView;
 import spark.template.freemarker.FreeMarkerRoute;
 
-public class HelloSpark {
+public class HelloSpark { //Peterin kone on hidas
 
     /* Refactor */
     // Create a new ArticleDbService using the ArticleServletDao as the implmentation
